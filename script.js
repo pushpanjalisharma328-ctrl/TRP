@@ -10,6 +10,11 @@ subjectButtons.forEach(function(button)
     button.classList.add("selected");
  });
 });
+const scienceButton = document.querySelector('[data-subject="science"]');
+const scienceOptions = document.getElementById("science-options");
+scienceButton.addEventListener("click",function(){
+    scienceOptions.style.display = "block";
+});
 const startButton = document.getElementById("start-btn");
 startButton.addEventListener("click", function(){
     alert("Start Quiz clicked!");
