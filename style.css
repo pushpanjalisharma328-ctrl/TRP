@@ -67,9 +67,10 @@ start-btn:hover {
 }
 .quiz {
     background: white;
-    max-width: 650px;
+    max-width: 600px;
     width: 100%;
     padding: 35px;
+    margin-left: 10px;
     border-radius: 20px;
     box-shadow: 0 10px 35px rgba(0,0,0,0.12);
 }
@@ -97,4 +98,141 @@ next-btn {
     border: none;
     border-radius: 8px;
     cursor: pointer;
+} 
+/* Selected answer */
+
+.option.selected {
+    background-color: #dbeafe;
+}
+
+/* Correct answer */
+
+.option.correct {
+    background-color: #bbf7d0;
+    border: 2px solid #16a34a;
+}
+
+/* Incorrect answer */
+
+.option.incorrect {
+    background-color: #fecaca;
+    border: 2px solid #dc2626;
+}
+
+/* Disabled options */
+
+.option:disabled {
+    cursor: not-allowed;
+    opacity: 0.9;
+}
+
+/* Next button */
+
+#next-btn {
+    padding: 10px 25px;
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.subject-btn {
+    background-color: white;
+    color: #2563eb;
+    border: 1px solid #60a5fa;
+    padding: 12px 22px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.subject-btn:hover {
+    background-color: #dbeafe;
+}
+
+.subject-btn.selected {
+    background-color: #2563eb;
+    color: white;
+    border-color: #2563eb;
+}
+/* SIGN UP PAGE */
+
+.signup-page {
+    min-height: 100vh;
+    margin: 0;
+    padding: 30px 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    font-family: Arial, sans-serif;
+}
+
+.signup-container {
+    width: 100%;
+    max-width: 420px;
+    padding: 35px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.signup-container h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.signup-container p {
+    text-align: center;
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.signup-container label {
+    display: block;
+    margin-bottom: 7px;
+    color: #333;
+    font-weight: bold;
+}
+
+.signup-container input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 18px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+    outline: none;
+}
+
+.signup-container input:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 5px rgba(102, 126, 234, 0.4);
+}
+
+.signup-container button {
+    width: 100%;
+    padding: 13px;
+    background: #667eea;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.signup-container button:hover {
+    background: #764ba2;
+}
+
+.signup-container a {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.signup-container a:hover {
+    text-decoration: underline;
 }
