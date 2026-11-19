@@ -1,41 +1,239 @@
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <!-- Character encoding -->
     <meta charset="UTF-8">
+
+    <!-- Responsive design -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TRP</title>
+
+    <!-- Website description -->
+    <meta
+        name="description"
+        content="TRP - Test your knowledge, improve your skills, and challenge yourself with interactive quizzes."
+    >
+
+    <!-- Browser tab title -->
+    <title>TRP | Test Your Knowledge</title>
+
+    <!-- External CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
-<body> 
+
+<body>
+
+    <!-- =========================
+         HOME SECTION
+    ========================== -->
+
     <main class="home">
-    <h1>Welcome to My app</h1>
-    <p>Test your knowledge and improve your skills.</p>
-    <h2>Select Subject</h2>
-    <button class="subject-btn" data-subject="mathematics">Mathematics</button>
-    <button class="subject-btn" data-subject="programming">Programming</button>
-    <button class="subject-btn"
-     data-subject="science">Science</button>
-     <div id="science-option">
-        <h3>Select Science Subject</h3>
-        <button class="subject-btn"
-        data-subject="physics">Physics</button>
-         <button class="subject-btn"
-        data-subject="chemistry">Chemistry</button>
-         <button class="subject-btn"
-        data-subject="biology">Biology</button>
-     </div>
-    <button id="start-btn">Start Quiz</button>
-    </main> 
-    <section id="quiz" class="quiz">
-        <h2>Quiz</h2>
-        <p id="question">Question will appear here</p>
-        <button class="option">Option A</button>
-        <button class="option">Option B</button>
-         <button class="option">Option C</button>
-          <button class="option">Option D</button>
-          <button id="next-btn">Next</button>
+
+        <!-- Welcome Header -->
+        <header class="home-header">
+
+            <h1>Welcome to TRP</h1>
+
+            <p>
+                Challenge yourself, test your knowledge,
+                and improve your skills.
+            </p>
+
+        </header>
+
+
+        <!-- =========================
+             SUBJECT SELECTION
+        ========================== -->
+
+        <section class="subject-section">
+
+            <h2>Select Your Subject</h2>
+
+            <p>Choose a subject to begin your quiz.</p>
+
+
+            <!-- Main Subjects -->
+
+            <div class="subject-options">
+
+                <button
+                    type="button"
+                    class="subject-btn"
+                    data-subject="mathematics"
+                >
+                    Mathematics
+                </button>
+
+
+                <button
+                    type="button"
+                    class="subject-btn"
+                    data-subject="programming"
+                >
+                    Programming
+                </button>
+
+
+                <button
+                    type="button"
+                    class="subject-btn"
+                    data-subject="science"
+                >
+                    Science
+                </button>
+
+            </div>
+
+
+            <!-- =========================
+                 SCIENCE SUBCATEGORIES
+            ========================== -->
+
+            <div id="science-option" style="display: none;">
+
+                <h3>Select a Science Subject</h3>
+
+
+                <div class="science-options">
+
+                    <button
+                        type="button"
+                        class="subject-btn"
+                        data-subject="physics"
+                    >
+                        Physics
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="subject-btn"
+                        data-subject="chemistry"
+                    >
+                        Chemistry
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="subject-btn"
+                        data-subject="biology"
+                    >
+                        Biology
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- Start Quiz Button -->
+
+            <button
+                type="button"
+                id="start-btn"
+            >
+                Start Quiz
+            </button>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =========================
+         QUIZ SECTION
+    ========================== -->
+
+    <section
+        id="quiz"
+        class="quiz"
+        aria-labelledby="quiz-heading"
+        style="display: none;"
+    >
+
+        <!-- Quiz Heading -->
+
+        <header class="quiz-header">
+
+            <h2 id="quiz-heading">Your Quiz</h2>
+
+            <p id="question" aria-live="polite">
+                Your question will appear here.
+            </p>
+
+        </header>
+
+
+        <!-- Answer Options -->
+
+        <div
+            class="answer-options"
+            role="group"
+            aria-label="Answer choices"
+        >
+
+            <button
+                type="button"
+                class="option"
+            >
+                Option A
+            </button>
+
+
+            <button
+                type="button"
+                class="option"
+            >
+                Option B
+            </button>
+
+
+            <button
+                type="button"
+                class="option"
+            >
+                Option C
+            </button>
+
+
+            <button
+                type="button"
+                class="option"
+            >
+                Option D
+            </button>
+
+        </div>
+
+
+        <!-- Next Question Button -->
+
+        <button
+            type="button"
+            id="next-btn"
+            disabled
+        >
+            Next
+        </button>
+
     </section>
+
+
+
+    <!-- =========================
+         JAVASCRIPT FILES
+    ========================== -->
+
+    <!-- Questions data -->
     <script src="questions.js"></script>
+
+    <!-- Quiz functionality -->
     <script src="script.js"></script>
+
 </body>
+
 </html>
